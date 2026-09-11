@@ -1,0 +1,99 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 100px);
+  background-color: var(--light-gray);
+  padding: 20px;
+}
+
+.login form {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.login h1 {
+  color: var(--navy-blue);
+  margin-bottom: 10px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.login label {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.login input {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.login input:focus {
+  border-color: var(--emerald-green);
+}
+
+.login button {
+  margin-top: 10px;
+  padding: 14px;
+  background-color: var(--emerald-green);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.login button:hover {
+  background-color: #058f63;
+}
+
+.login .error {
+  color: #ef4444;
+  font-size: 14px;
+  text-align: center;
+  background-color: #fee2e2;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* ── Mobile Responsiveness (Task 12) ───────────────────────────── */
+@media (max-width: 480px) {
+  .login {
+    padding: 15px;
+  }
+
+  .login form {
+    padding: 25px 20px;
+    gap: 12px;
+  }
+
+  .login h1 {
+    font-size: 22px;
+  }
+
+  .login input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .login button {
+    padding: 12px;
+    font-size: 15px;
+  }
+}

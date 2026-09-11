@@ -1,0 +1,598 @@
+.orders {
+  display: flex;
+  justify-content: center;
+  color: #555;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.orders .container {
+  width: 1200px;
+  max-width: 100%;
+  padding: 50px 20px;
+}
+
+.orders .title {
+  margin-bottom: 40px;
+}
+
+.orders .title h1 {
+  color: #0d2137;
+  font-size: 32px;
+}
+
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.order-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+}
+
+.order-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.order-info {
+  padding: 20px;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.title-wrapper {
+  flex: 1;
+}
+
+.order-info h3 {
+  font-size: 16px;
+  color: #1e293b;
+  margin-bottom: 5px;
+  line-height: 1.4;
+  height: 44px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.role-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.role-badge.vendor {
+  background-color: #ecfdf5;
+  color: #10b981;
+}
+
+.role-badge.buyer {
+  background-color: #eff6ff;
+  color: #3b82f6;
+}
+
+.status-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+
+.status-badge.completed {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.pending {
+  background-color: #fef9c3;
+  color: #854d0e;
+}
+
+.status-badge.disputed {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.order-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.order-details .price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0d2137;
+}
+
+.order-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.action-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-icon.contact {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.action-icon.contact:hover {
+  background-color: #10b981;
+  color: white;
+}
+
+.action-icon.download {
+  background-color: rgba(13, 33, 55, 0.1);
+  color: #0d2137;
+}
+
+.action-icon.download:hover {
+  background-color: #0d2137;
+  color: white;
+}
+
+.action-icon.cancel {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.action-icon.cancel:hover {
+  background-color: #ef4444;
+  color: white;
+}
+
+.action-icon.dispute {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.action-icon.dispute:hover {
+  background-color: #ef4444;
+  color: white;
+}
+
+.action-icon.complete {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.action-icon.complete:hover {
+  background-color: #10b981;
+  color: white;
+}
+
+.status-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.order-status-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tracking-container {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+}
+
+.tracking-bar {
+  height: 6px;
+  background-color: #e2e8f0;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tracking-progress {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease-in-out;
+}
+
+.tracking-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.status-select {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+  background-color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+.status-select:focus {
+  border-color: #3b82f6;
+}
+
+.order-details .meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-details .method {
+  font-size: 11px;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+/* Dispute Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.dispute-modal {
+  background-color: white;
+  width: 500px;
+  max-width: 90%;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.dispute-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.dispute-modal .modal-header h2 {
+  font-size: 22px;
+  color: #0d2137;
+}
+
+.close-icon {
+  cursor: pointer;
+  color: #94a3b8;
+  transition: color 0.2s;
+}
+
+.close-icon:hover {
+  color: #ef4444;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-body label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.modal-body textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  min-height: 120px;
+  resize: vertical;
+  outline: none;
+}
+
+.modal-body textarea:focus {
+  border-color: #ef4444;
+}
+
+.file-upload {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border: 2px dashed #e2e8f0;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  cursor: pointer;
+  position: relative;
+}
+
+.file-upload input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.submit-dispute-btn {
+  background-color: #ef4444;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-dispute-btn:hover {
+  background-color: #dc2626;
+}
+
+.submit-dispute-btn:disabled {
+  background-color: #fca5a5;
+  cursor: not-allowed;
+}
+
+.submit-dispute-btn.response {
+  background-color: #3b82f6;
+}
+
+.submit-dispute-btn.response:hover {
+  background-color: #2563eb;
+}
+
+.respond-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.respond-btn:hover {
+  background-color: #2563eb;
+}
+
+.refund-loop-container {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #fff7ed;
+  border: 1px solid #ffedd5;
+  border-radius: 10px;
+}
+
+.refund-alert {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #c2410c;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.send-refund-box p, .waiting-box p, .disputed-refund-box p {
+  font-size: 13px;
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+.proof-upload-sm {
+  margin-bottom: 12px;
+}
+
+.proof-upload-sm label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #64748b;
+  transition: all 0.2s;
+}
+
+.proof-upload-sm label:hover {
+  border-color: #94a3b8;
+  color: #1e293b;
+}
+
+.mark-sent-btn {
+  width: 100%;
+  padding: 8px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.dispute-refund-btn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dispute-refund-btn.secondary {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #fee2e2;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.dispute-refund-btn.secondary:hover {
+  background-color: #fecaca;
+}
+
+.confirm-refund-btn {
+  width: 100%;
+  padding: 8px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ── Mobile ≤ 768px ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .orders .container {
+    padding: 30px 16px;
+  }
+
+  .orders .title h1 {
+    font-size: 26px;
+  }
+
+  .orders-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .dispute-modal {
+    max-width: 95vw;
+    padding: 24px;
+  }
+
+  .dispute-modal .modal-header h2 {
+    font-size: 18px;
+  }
+
+  .refund-loop-container {
+    padding: 12px;
+  }
+}
+
+/* ── Small Mobile ≤ 480px ───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .orders .container {
+    padding: 20px 12px;
+  }
+
+  .orders .title {
+    margin-bottom: 24px;
+  }
+
+  .orders .title h1 {
+    font-size: 22px;
+  }
+
+  .orders-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .order-card img {
+    height: 150px;
+  }
+
+  .order-info {
+    padding: 16px;
+  }
+
+  .order-info h3 {
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .order-details .price {
+    font-size: 18px;
+  }
+
+  .order-actions {
+    gap: 10px;
+  }
+
+  .action-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .tracking-labels {
+    font-size: 8px;
+  }
+
+  .status-select {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  .dispute-modal {
+    padding: 20px 16px;
+    border-radius: 10px;
+  }
+
+  .modal-body textarea {
+    min-height: 100px;
+  }
+
+  .file-upload {
+    padding: 8px 12px;
+  }
+}

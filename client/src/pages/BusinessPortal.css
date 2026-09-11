@@ -1,0 +1,523 @@
+.business-portal {
+  --navy-50: #f0f4f8;
+  --navy-100: #d9e2ec;
+  --navy-200: #bcccdc;
+  --navy-300: #9fb3c8;
+  --navy-400: #829ab1;
+  --navy-500: #627d98;
+  --navy-600: #486581;
+  --navy-700: #334e68;
+  --navy-800: #243b53;
+  --navy-900: #1a2a47;
+
+  --emerald-50: #ecfdf5;
+  --emerald-100: #d1fae5;
+  --emerald-200: #a7f3d0;
+  --emerald-300: #6ee7b7;
+  --emerald-400: #34d399;
+  --emerald-500: #10b981;
+  --emerald-600: #059669;
+  --emerald-700: #047857;
+  --emerald-800: #065f46;
+  --emerald-900: #064e3b;
+
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+
+  display: flex;
+  flex-direction: column;
+  padding: 80px 20px;
+  background-color: var(--navy-50);
+  min-height: 100vh;
+}
+
+/* Glassmorphism Utilities */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-dark {
+  background: rgba(26, 42, 71, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.business-portal .container {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.business-portal .hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 100px;
+  text-align: left;
+}
+
+.business-portal .hero-content {
+  flex: 1.2;
+}
+
+.business-portal .hero-image {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.business-portal .hero-image img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 32px;
+  box-shadow: 0 30px 60px -12px rgba(26, 42, 71, 0.2);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.business-portal .hero-section h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  color: var(--navy-900);
+  margin-bottom: 24px;
+  font-weight: 800;
+}
+
+.business-portal .hero-section h1 span {
+  color: var(--emerald-500);
+}
+
+.business-portal .hero-section p {
+  font-size: 1.25rem;
+  color: var(--navy-600);
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.business-portal .hero-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.business-portal .hero-btns .action-btn {
+  width: auto;
+  min-width: 180px;
+  padding: 18px 36px;
+}
+
+.business-portal .action-btn.secondary {
+  background: white;
+  color: var(--navy-900);
+  border: 2px solid var(--navy-100);
+}
+
+.business-portal .action-btn.secondary:hover {
+  border-color: var(--navy-900);
+  background: var(--navy-50);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .business-portal .hero-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .business-portal .hero-section p {
+    margin: 0 auto 40px;
+  }
+  
+  .business-portal .hero-btns {
+    justify-content: center;
+  }
+  
+  .business-portal .hero-section h1 {
+    font-size: 3rem;
+  }
+}
+
+.business-portal .showcase-section {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  margin-bottom: 120px;
+}
+
+.business-portal .showcase-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.business-portal .showcase-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.business-portal .showcase-content {
+  flex: 1;
+}
+
+.business-portal .showcase-image {
+  flex: 1;
+}
+
+.business-portal .showcase-image img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.business-portal .showcase-image img:hover {
+  transform: scale(1.02);
+}
+
+.business-portal .badge-text {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--emerald-50);
+  color: var(--emerald-600);
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.business-portal .badge-text.navy {
+  background: var(--navy-50);
+  color: var(--navy-600);
+}
+
+.business-portal .showcase-content h2 {
+  font-size: 3rem;
+  color: var(--navy-900);
+  margin-bottom: 20px;
+}
+
+.business-portal .showcase-content h2 span {
+  color: var(--emerald-500);
+}
+
+.business-portal .showcase-content p {
+  font-size: 1.15rem;
+  color: var(--navy-600);
+  margin-bottom: 30px;
+}
+
+.business-portal .feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.business-portal .feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.business-portal .icon-box {
+  width: 48px;
+  height: 48px;
+  background: var(--emerald-500);
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.business-portal .icon-box.navy {
+  background: var(--navy-900);
+}
+
+.business-portal .feature-list li strong {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--navy-900);
+  margin-bottom: 4px;
+}
+
+.business-portal .feature-list li span {
+  color: var(--navy-500);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.business-portal .action-btn.navy {
+  background: var(--navy-900);
+  color: white;
+  border: none;
+}
+
+.business-portal .action-btn.navy:hover {
+  background: var(--navy-800);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(26, 42, 71, 0.1);
+}
+
+@media (max-width: 992px) {
+  .business-portal .showcase-item,
+  .business-portal .showcase-item.reverse {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .business-portal .feature-list li {
+    text-align: left;
+  }
+
+  .business-portal .showcase-content h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Institutional Governance Section */
+.business-portal .governance-section {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 80px;
+  margin-bottom: 120px;
+  border-radius: 40px;
+}
+
+.business-portal .governance-image {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+.business-portal .governance-image img {
+  width: 100%;
+  max-width: 400px;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+}
+
+.business-portal .governance-content {
+  flex: 1.2;
+}
+
+.business-portal .governance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.business-portal .gov-card {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.business-portal .gov-card h3 {
+  font-size: 1.1rem;
+  color: var(--navy-900);
+  margin-bottom: 12px;
+}
+
+.business-portal .gov-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--navy-500);
+  margin-bottom: 0;
+}
+
+/* PO Modern Section */
+/* PO Career Development Center Section */
+.business-portal .po-cdc-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  margin-bottom: 120px;
+  background: var(--navy-900);
+  padding: 80px;
+  border-radius: 48px;
+  color: white;
+}
+
+.business-portal .po-cdc-section h2 {
+  color: white;
+}
+
+.business-portal .po-cdc-content {
+  flex: 1.2;
+}
+
+.business-portal .po-cdc-image {
+  flex: 0.8;
+}
+
+.business-portal .po-cdc-image img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.business-portal .po-features li span {
+  color: var(--navy-300);
+}
+
+.business-portal .po-features li strong {
+  color: white;
+}
+
+.business-portal .po-register-btn {
+  background: var(--emerald-500);
+  color: white;
+  padding: 18px 48px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.business-portal .po-register-btn:hover {
+  background: var(--emerald-400);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
+}
+
+/* Pricing Section */
+.business-portal .pricing-section {
+  margin-bottom: 120px;
+}
+
+.business-portal .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.business-portal .pricing-table-container {
+  background: white;
+  padding: 40px;
+  border-radius: 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.business-portal .pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.business-portal .pricing-table th,
+.business-portal .pricing-table td {
+  padding: 24px;
+  text-align: center;
+  border-bottom: 1px solid var(--navy-50);
+}
+
+.business-portal .pricing-table th:first-child,
+.business-portal .pricing-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: var(--navy-900);
+}
+
+.business-portal .pricing-table th {
+  font-size: 1.25rem;
+  color: var(--navy-600);
+  background: white;
+}
+
+.business-portal .pricing-table th.highlight,
+.business-portal .pricing-table td.highlight {
+  background: var(--navy-50);
+  color: var(--emerald-600);
+  font-weight: 700;
+}
+
+.business-portal .pricing-table th.highlight {
+  border-radius: 16px 16px 0 0;
+}
+
+.business-portal .pricing-table tr:last-child td.highlight {
+  border-radius: 0 0 16px 16px;
+}
+
+/* Onboarding CTA */
+.business-portal .onboarding-cta {
+  text-align: center;
+  padding: 100px 40px;
+  border-radius: 48px;
+  margin-bottom: 80px;
+  color: white;
+}
+
+.business-portal .onboarding-cta h2 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.business-portal .onboarding-cta p {
+  font-size: 1.25rem;
+  color: var(--navy-200);
+  margin-bottom: 40px;
+}
+
+.business-portal .cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.business-portal .onboarding-cta .action-btn {
+  width: auto;
+  min-width: 220px;
+  padding: 18px 40px;
+}
+
+@media (max-width: 1100px) {
+  .business-portal .governance-section,
+  .business-portal .po-cdc-section {
+    flex-direction: column;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .business-portal .governance-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .business-portal .cta-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .business-portal .onboarding-cta h2 {
+    font-size: 2.2rem;
+  }
+}

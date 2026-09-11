@@ -1,0 +1,118 @@
+.terms-page {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding-bottom: 80px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.terms-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.terms-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  background: linear-gradient(to right, #ffffff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.terms-header p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+.terms-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.terms-section {
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e2e8f0;
+}
+
+.terms-section h2 {
+  font-size: 1.75rem;
+  color: #0f172a;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.section-number {
+  color: #10b981;
+  background: #ecfdf5;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.terms-section p {
+  color: #475569;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.terms-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.terms-list li {
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.terms-list li::before {
+  content: "✓";
+  color: #10b981;
+  font-weight: bold;
+}
+
+.acceptance-card {
+  background: #f1f5f9;
+  border-left: 6px solid #10b981;
+  padding: 30px;
+  border-radius: 0 16px 16px 0;
+  margin-bottom: 40px;
+}
+
+.acceptance-card p {
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+@media (max-width: 768px) {
+  .terms-header h1 {
+    font-size: 2.25rem;
+  }
+  
+  .terms-section {
+    padding: 30px 20px;
+  }
+}

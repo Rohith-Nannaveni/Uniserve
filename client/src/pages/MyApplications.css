@@ -1,0 +1,273 @@
+.my-applications {
+  padding: 50px 0;
+  background-color: #f8fafc;
+  min-height: 80vh;
+}
+
+.my-applications .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.my-applications .header {
+  margin-bottom: 40px;
+}
+
+.my-applications h1 {
+  color: #1a2a47;
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.apps-list-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.app-card-v2 {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #1a2a47;
+}
+
+.app-main-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.job-meta h3 {
+  color: #1a2a47;
+  margin-bottom: 5px;
+  font-size: 1.25rem;
+}
+
+.job-meta .company {
+  color: #10b981;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.app-status {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.status-pill {
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.status-pill.pending { background: #fef9c3; color: #854d0e; }
+.status-pill.shortlisted { background: #dcfce7; color: #166534; }
+.status-pill.rejected { background: #fee2e2; color: #991b1b; }
+.status-pill.interview { background: #e0f2fe; color: #075985; }
+.status-pill.hired { background: #10b981; color: white; }
+
+.hr-details-banner {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.banner-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1e40af;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.hr-details-banner p {
+  color: #1e3a8a;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.app-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.view-job-link {
+  background: none;
+  border: none;
+  color: #1a2a47;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.withdraw-btn {
+  color: #ef4444;
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.withdraw-btn:hover {
+  text-decoration: underline;
+}
+
+.loader {
+  text-align: center;
+  padding: 100px;
+  font-size: 1.2rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 80px 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.empty-state p {
+  color: #64748b;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.browse-jobs-btn {
+  background-color: #1a2a47;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(26, 42, 71, 0.15);
+}
+
+.browse-jobs-btn:hover {
+  background-color: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(26, 42, 71, 0.2);
+}
+
+.browse-jobs-btn:active {
+  transform: translateY(0);
+}
+
+/* ── Mobile ≤ 768px ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .my-applications {
+    padding: 30px 0;
+  }
+
+  .my-applications .container {
+    padding: 0 16px;
+  }
+
+  .my-applications h1 {
+    font-size: 1.8rem;
+  }
+
+  .app-card-v2 {
+    padding: 20px;
+  }
+
+  .app-main-info {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .app-status {
+    text-align: left;
+  }
+
+  .app-footer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .hr-details-banner {
+    padding: 12px;
+  }
+
+  .empty-state {
+    padding: 50px 24px;
+  }
+}
+
+/* ── Small Mobile ≤ 480px ───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .my-applications .container {
+    padding: 0 12px;
+  }
+
+  .my-applications h1 {
+    font-size: 1.5rem;
+  }
+
+  .my-applications .header {
+    margin-bottom: 24px;
+  }
+
+  .app-card-v2 {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .job-meta h3 {
+    font-size: 1.1rem;
+  }
+
+  .job-meta .company {
+    font-size: 0.85rem;
+  }
+
+  .status-pill {
+    font-size: 0.7rem;
+    padding: 4px 12px;
+  }
+
+  .hr-details-banner p {
+    font-size: 0.85rem;
+  }
+
+  .empty-state {
+    padding: 40px 16px;
+    border-radius: 14px;
+  }
+
+  .empty-state p {
+    font-size: 0.95rem;
+  }
+
+  .browse-jobs-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

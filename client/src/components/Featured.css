@@ -1,0 +1,198 @@
+.featured {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--navy-blue);
+  color: white;
+  overflow: hidden;
+}
+
+.featured .container {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.featured .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  z-index: 1;
+}
+
+.featured h1 {
+  font-size: 52px;
+  color: white;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.featured h1 span {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--emerald-green);
+}
+
+.featured .search {
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 4px;
+  width: 100%;
+  max-width: 650px;
+}
+
+.featured .searchInput {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.featured .searchInput select {
+  border: none;
+  outline: none;
+  padding: 15px 40px 15px 15px;
+  width: 100%;
+  font-size: 17px;
+  color: var(--navy-blue);
+  background-color: transparent;
+  cursor: pointer;
+  appearance: none; /* Removes default browser styling */
+}
+
+.featured .searchInput .search-icon {
+  position: absolute;
+  right: 15px;
+  pointer-events: none;
+}
+
+.featured .searchInput select:focus {
+  outline: none;
+}
+
+.featured .search button {
+  padding: 15px 40px;
+  border: none;
+  background-color: var(--emerald-green);
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s background-color ease;
+}
+
+.featured .search button:hover {
+  background-color: #058f63;
+}
+
+.featured .popular {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.featured .popular button {
+  color: white;
+  border: 1px solid rgba(255,255,255,0.6);
+  padding: 6px 16px;
+  border-radius: 50px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.featured .popular button:hover {
+  background-color: white;
+  color: var(--navy-blue);
+  border-color: white;
+}
+
+.featured .right {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.featured .right img {
+  max-width: 110%;
+  height: auto;
+  object-fit: contain;
+  margin-right: -10%; /* Makes image bleed out slightly for dynamic look */
+}
+
+/* ── Mobile ≤ 768px ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .featured {
+    height: auto;
+    padding: 40px 20px 50px;
+  }
+
+  .featured .container {
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .featured .left {
+    gap: 18px;
+    width: 100%;
+  }
+
+  .featured h1 {
+    font-size: 30px;
+  }
+
+  .featured .search {
+    max-width: 100%;
+  }
+
+  .featured .searchInput select {
+    font-size: 14px;
+    padding: 12px 30px 12px 12px;
+  }
+
+  .featured .search button {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  .featured .popular {
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .featured .right {
+    display: none;
+  }
+}
+
+/* ── Small Mobile ≤ 480px ───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .featured {
+    padding: 28px 16px 36px;
+  }
+
+  .featured h1 {
+    font-size: 24px;
+  }
+
+  .featured .search button {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+}

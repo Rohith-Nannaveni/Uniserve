@@ -1,0 +1,64 @@
+:root {
+  --navy-blue: #1a2a47;
+  --emerald-green: #10b981;
+  --white: #ffffff;
+  --light-gray: #f8fafc;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--light-gray);
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.link:hover {
+  color: var(--emerald-green);
+}
+
+button {
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+  color: var(--navy-blue);
+  font-weight: 700;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}

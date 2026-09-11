@@ -1,0 +1,174 @@
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: var(--light-gray);
+  min-height: calc(100vh - 100px);
+}
+
+.register form {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  gap: 60px;
+  background-color: white;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.register h1 {
+  color: var(--navy-blue);
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.register .left,
+.register .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register label {
+  color: var(--text-dark);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.register input,
+.register textarea {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.register input:focus,
+.register textarea:focus {
+  border-color: var(--emerald-green);
+}
+
+.register button {
+  border: none;
+  padding: 14px;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: var(--emerald-green);
+  cursor: pointer;
+  margin-top: 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.register button:hover {
+  background-color: #058f63;
+}
+
+.register .toggle {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.register .toggle label {
+  margin: 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cbd5e1;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--emerald-green);
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+/* ── Mobile Responsiveness (Task 12) ───────────────────────────── */
+@media (max-width: 768px) {
+  .register {
+    padding: 30px 20px;
+  }
+
+  .register form {
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+  }
+
+  .register h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .register {
+    padding: 20px 15px;
+  }
+
+  .register form {
+    padding: 25px 20px;
+    border-radius: 12px;
+    gap: 25px;
+  }
+
+  .register h1 {
+    font-size: 20px;
+  }
+
+  .register input, .register textarea {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .register button {
+    padding: 12px;
+    font-size: 15px;
+  }
+}

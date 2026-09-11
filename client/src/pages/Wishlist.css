@@ -1,0 +1,119 @@
+.wishlist {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  min-height: 100vh;
+  padding: 80px 0;
+}
+
+.wishlist .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.wishlist .header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.wishlist .header h1 {
+  color: #1a202c;
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.wishlist .header p {
+  color: #718096;
+  font-size: 16px;
+}
+
+.wishlist .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(324px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.wishlist .loading,
+.wishlist .empty-wishlist {
+  text-align: center;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.wishlist .empty-wishlist h3 {
+  font-size: 24px;
+  color: #1e293b;
+  margin: 0;
+}
+
+.wishlist .empty-wishlist p {
+  color: #64748b;
+  font-size: 16px;
+}
+
+/* ── Mobile ≤ 768px ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .wishlist {
+    padding: 40px 0;
+  }
+
+  .wishlist .container {
+    padding: 0 16px;
+  }
+
+  .wishlist .header {
+    margin-bottom: 30px;
+  }
+
+  .wishlist .header h1 {
+    font-size: 28px;
+  }
+
+  .wishlist .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+}
+
+/* ── Small Mobile ≤ 480px ───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .wishlist {
+    padding: 30px 0;
+  }
+
+  .wishlist .container {
+    padding: 0 12px;
+  }
+
+  .wishlist .header h1 {
+    font-size: 24px;
+    gap: 8px;
+  }
+
+  .wishlist .header p {
+    font-size: 14px;
+  }
+
+  .wishlist .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .wishlist .loading,
+  .wishlist .empty-wishlist {
+    padding: 60px 0;
+  }
+
+  .wishlist .empty-wishlist h3 {
+    font-size: 20px;
+  }
+}

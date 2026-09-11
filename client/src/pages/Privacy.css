@@ -1,0 +1,135 @@
+.privacy-page {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding-bottom: 80px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.privacy-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.privacy-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  background: linear-gradient(to right, #ffffff, #94a3b8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.privacy-header p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+.privacy-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.privacy-section {
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e2e8f0;
+}
+
+.privacy-section h2 {
+  font-size: 1.75rem;
+  color: #0f172a;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.section-icon {
+  color: #10b981;
+  background: #ecfdf5;
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.privacy-section p {
+  color: #475569;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.privacy-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.privacy-list li {
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.privacy-list li::before {
+  content: "•";
+  color: #10b981;
+  font-weight: bold;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 40px;
+  border-radius: 24px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.contact-card h2 {
+  color: white;
+  margin-bottom: 16px;
+}
+
+.contact-card p {
+  color: #d1fae5;
+  margin-bottom: 24px;
+}
+
+.contact-email {
+  display: inline-block;
+  background: white;
+  color: #059669;
+  padding: 12px 32px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.contact-email:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .privacy-header h1 {
+    font-size: 2.25rem;
+  }
+  
+  .privacy-section {
+    padding: 30px 20px;
+  }
+}

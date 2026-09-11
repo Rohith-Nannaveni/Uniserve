@@ -1,0 +1,284 @@
+.profile-settings-tab {
+  padding: 24px;
+  background: white;
+}
+
+.profile-settings-tab .tab-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.profile-settings-tab .tab-header h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.profile-settings-tab .tab-header p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+.pending-notice {
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  color: #92400e;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.pending-notice p {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+}
+
+.success-msg {
+  background: #f0fdf4;
+  border: 1px solid #dcfce7;
+  color: #166534;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.error-msg {
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+  color: #991b1b;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-section {
+  margin-bottom: 32px;
+}
+
+.form-section h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.section-desc {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.help-text {
+  display: block;
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.proofs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.proof-card {
+  padding: 16px;
+  border: 1px solid #f1f5f9;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.proof-card .p-info {
+  flex: 1;
+}
+
+.proof-card strong {
+  display: block;
+  font-size: 13px;
+  color: #1e293b;
+}
+
+.proof-card span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.upload-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.upload-label:hover {
+  background: #f1f5f9;
+}
+
+.new-uploads {
+  margin-top: 16px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 6px;
+}
+
+.new-uploads strong {
+  font-size: 12px;
+  color: #475569;
+}
+
+.new-uploads ul {
+  margin: 8px 0 0 0;
+  padding-left: 20px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.save-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.save-btn:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.save-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.institutional-status {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #94a3b8;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.institutional-status strong {
+  color: #64748b;
+}
+
+/* ── Mobile ≤ 768px ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .profile-settings-tab {
+    padding: 16px;
+  }
+
+  .proofs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    justify-content: stretch;
+  }
+
+  .save-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .profile-settings-tab .tab-header h3 {
+    font-size: 18px;
+  }
+}
+
+/* ── Small Mobile ≤ 480px ───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .profile-settings-tab {
+    padding: 12px;
+  }
+
+  .profile-settings-tab .tab-header {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .profile-settings-tab .tab-header h3 {
+    font-size: 16px;
+  }
+
+  .form-section h4 {
+    font-size: 14px;
+  }
+
+  .proof-card {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .pending-notice {
+    padding: 12px;
+    font-size: 13px;
+  }
+}

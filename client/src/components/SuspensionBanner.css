@@ -1,0 +1,306 @@
+.suspension-banner {
+  background-color: #fff1f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.suspension-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.suspension-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.suspension-icon {
+  color: #dc2626;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.suspension-info h3 {
+  color: #991b1b;
+  margin: 0 0 0.25rem 0;
+  font-size: 1.25rem;
+}
+
+.suspension-info p {
+  color: #b91c1c;
+  margin: 0;
+}
+
+.suspension-reason, .suspension-duration {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid #f87171;
+}
+
+.appeal-btn {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.appeal-btn:hover {
+  background-color: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.appeal-pending {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1px solid #fcd34d;
+}
+
+/* Modal Styles */
+.appeal-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.appeal-modal {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.appeal-modal h2 {
+  margin: 0 0 1rem 0;
+  color: #111827;
+}
+
+.appeal-modal textarea {
+  width: 100%;
+  height: 150px;
+  padding: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin: 1rem 0;
+  resize: none;
+  font-family: inherit;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.cancel-btn {
+  background: none;
+  border: 1px solid #d1d5db;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background-color: #111827;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modal-message {
+  margin-top: 1rem;
+  text-align: center;
+  color: #059669;
+  font-weight: 500;
+}
+
+.appeal-upload-section {
+  margin-bottom: 1.5rem;
+}
+
+.appeal-upload-section label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.upload-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.upload-trigger {
+  padding: 0.5rem 1rem;
+  background-color: #f3f4f6;
+  border: 1px dashed #9ca3af;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #4b5563;
+  transition: all 0.2s;
+}
+
+.upload-trigger:hover {
+  background-color: #e5e7eb;
+  border-color: #6b7280;
+}
+
+.upload-count {
+  font-size: 0.75rem;
+  color: #059669;
+  font-weight: 500;
+}
+
+/* Low Trust Theme Overrides */
+.low-trust-banner {
+  background-color: #fffbeb;
+  border-color: #fcd34d;
+}
+
+.low-trust-banner .suspension-icon {
+  color: #d97706;
+}
+
+.low-trust-banner .suspension-info h3 {
+  color: #92400e;
+}
+
+.low-trust-banner .suspension-info p {
+  color: #b45309;
+}
+
+.low-trust-banner .suspension-reason {
+  border-left-color: #fbbf24;
+}
+
+.low-trust-banner .appeal-btn {
+  background-color: #d97706;
+}
+
+.low-trust-banner .appeal-btn:hover {
+  background-color: #b45309;
+}
+
+/* ── Mobile ≤ 768px ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .suspension-banner {
+    padding: 1rem;
+  }
+
+  .suspension-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .appeal-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .appeal-pending {
+    width: 100%;
+    text-align: center;
+  }
+
+  .appeal-modal {
+    max-width: 95vw;
+    padding: 1.5rem;
+  }
+
+  .upload-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+/* ── Small Mobile ≤ 480px ───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .suspension-banner {
+    padding: 0.75rem;
+    border-radius: 8px;
+  }
+
+  .suspension-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .suspension-info h3 {
+    font-size: 1rem;
+  }
+
+  .suspension-info p {
+    font-size: 0.85rem;
+  }
+
+  .suspension-reason,
+  .suspension-duration {
+    font-size: 0.8rem;
+  }
+
+  .appeal-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .appeal-modal {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .appeal-modal h2 {
+    font-size: 1.1rem;
+  }
+
+  .appeal-modal textarea {
+    height: 120px;
+    padding: 0.75rem;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .modal-actions .cancel-btn,
+  .modal-actions .submit-btn {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}

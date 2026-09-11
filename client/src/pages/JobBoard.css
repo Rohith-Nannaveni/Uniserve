@@ -1,0 +1,234 @@
+.job-board {
+  padding: 50px 0;
+  background-color: #f8fafc;
+  min-height: 80vh;
+}
+
+.job-board .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.job-board .header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.job-board h1 {
+  color: #1a2a47;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.job-board .header p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.job-filters-bar {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.filter-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-input-group label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1a2a47;
+}
+
+.filter-input-group input, 
+.filter-input-group select {
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  outline: none;
+}
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.job-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.job-header h3 {
+  color: #1a2a47;
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+}
+
+.company-name {
+  color: #10b981;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.job-details {
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.detail-item {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.detail-item strong {
+  color: #1a2a47;
+}
+
+.job-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.skill-tag {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.more-skills {
+  color: #64748b;
+  font-size: 0.85rem;
+  align-self: center;
+}
+
+.view-details {
+  width: 100%;
+  background: #1a2a47;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.view-details:hover {
+  background: #2d3e5d;
+}
+
+.view-details.applied {
+  background: #10b981;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.no-jobs {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #64748b;
+  padding: 50px;
+  font-size: 1.2rem;
+}
+
+.loader, .error-container {
+  text-align: center;
+  padding: 100px;
+  font-size: 1.2rem;
+}
+
+.error-container {
+  color: #ef4444;
+}
+
+/* ── Mobile Responsiveness (Task 10) ───────────────────────────── */
+@media (max-width: 768px) {
+  .job-board {
+    padding: 30px 0;
+  }
+
+  .job-board h1 {
+    font-size: 2rem;
+  }
+
+  .job-filters-bar {
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+
+  .job-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-board .container {
+    padding: 0 16px;
+  }
+
+  .job-board h1 {
+    font-size: 1.6rem;
+  }
+
+  .job-board .header p {
+    font-size: 0.95rem;
+  }
+
+  .job-filters-bar {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .job-card {
+    padding: 20px;
+  }
+
+  .job-header h3 {
+    font-size: 1.15rem;
+  }
+
+  .company-name {
+    font-size: 0.9rem;
+  }
+
+  .detail-item {
+    font-size: 0.9rem;
+  }
+
+  .skill-tag {
+    padding: 3px 10px;
+    font-size: 0.8rem;
+  }
+
+  .no-jobs {
+    padding: 40px 20px;
+    font-size: 1rem;
+  }
+}

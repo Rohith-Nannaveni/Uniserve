@@ -1,0 +1,184 @@
+.serviceCardContainer {
+  position: relative;
+  width: 100%;
+}
+
+.serviceCard {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.wishlistBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+  z-index: 101;
+}
+
+.wishlistBtn:hover {
+  transform: scale(1.1);
+}
+
+.wishlistBtn.active {
+  background: white;
+}
+
+.serviceCard:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+  z-index: 100;
+}
+
+.serviceCard img.cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.serviceCard .info {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.serviceCard .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.serviceCard .user img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.serviceCard .user span {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.serviceCard p {
+  color: var(--text-dark);
+  font-size: 15px;
+  line-height: 1.4;
+  height: 42px;
+  overflow: hidden;
+  margin: 0;
+  font-weight: 500;
+}
+
+.serviceCard .star {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.serviceCard .star span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+.serviceCard hr {
+  height: 0;
+  border: 0;
+  border-top: 1px solid #f1f1f1;
+  margin: 0;
+}
+
+.serviceCard .detail {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.serviceCard .price {
+  text-align: right;
+}
+
+.serviceCard .price span {
+  color: var(--text-muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+}
+
+.serviceCard .price h2 {
+  color: var(--navy-blue);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ── Mobile ≤ 768px ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .serviceCard:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .serviceCard img.cover {
+    height: 170px;
+  }
+
+  .serviceCard .info {
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+  .serviceCard .detail {
+    padding: 10px 16px;
+  }
+}
+
+/* ── Small Mobile ≤ 480px ───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .serviceCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .serviceCard img.cover {
+    height: 150px;
+  }
+
+  .serviceCard p {
+    font-size: 14px;
+    height: 38px;
+  }
+
+  .serviceCard .price h2 {
+    font-size: 16px;
+  }
+
+  .wishlistBtn {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    right: 10px;
+  }
+}

@@ -1,0 +1,588 @@
+/* ══════════════════════════════════════════════════════════════════
+   Service Detail Page — Simple Single-Column Layout
+   4 cards stacked vertically: Hero → Pricing → Seller → Reviews
+   ══════════════════════════════════════════════════════════════════ */
+
+.service {
+  background-color: var(--light-gray);
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.service .service-content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ── Box 1: Hero Card ────────────────────────────────────────────── */
+.service .service-hero-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service .service-hero-card .breadcrumbs {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.service .service-hero-card h1 {
+  font-size: 32px;
+  color: var(--navy-blue);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.service .service-hero-card .user-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.service .service-hero-card .user-row .pp {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--emerald-green);
+}
+
+.service .service-hero-card .user-row span {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.service .service-hero-card .user-row .stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-left: 1px solid var(--border-color);
+  padding-left: 12px;
+  margin-left: 5px;
+}
+
+.service .service-hero-card .user-row .stars span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+/* Slider */
+.service .image-slider {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.service .image-slider .main-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.service .image-slider .main-image img {
+  width: 100%;
+  max-height: 500px;
+  display: block;
+  object-fit: cover;
+}
+
+.service .image-slider .thumbnails {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  overflow-x: auto;
+  background: #fafafa;
+}
+
+.service .image-slider .thumbnails img {
+  width: 90px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.service .image-slider .thumbnails img:hover {
+  opacity: 1;
+}
+
+.service .image-slider .thumbnails img.active {
+  opacity: 1;
+  border-color: var(--emerald-green);
+}
+
+/* About This Service text */
+.service .service-hero-card h2 {
+  font-size: 22px;
+  margin: 10px 0 0;
+  color: var(--navy-blue);
+}
+
+.service .service-hero-card p {
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-dark);
+  font-size: 15px;
+  margin: 0;
+}
+
+/* ── Box 2: Pricing Card ────────────────────────────────────────── */
+.service .service-pricing-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.service .service-pricing-card .price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service .service-pricing-card .price h2 {
+  font-size: 28px;
+  color: var(--navy-blue);
+  font-weight: 700;
+  margin: 0;
+}
+
+.service .service-pricing-card .price h3 {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 18px;
+  margin: 0;
+}
+
+.service .service-pricing-card > p {
+  color: var(--text-muted);
+  line-height: 1.5;
+  font-size: 15px;
+  margin: 0;
+}
+
+.service .service-pricing-card .details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 15px;
+}
+
+.service .service-pricing-card .pricing-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service .service-pricing-card .pricing-features .item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.service .service-pricing-card .purchase-btn {
+  background-color: var(--navy-blue);
+  padding: 15px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.service .service-pricing-card .purchase-btn:hover {
+  background-color: #0f172a;
+}
+
+.service .service-pricing-card .purchase-btn.disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+  color: #64748b;
+}
+
+/* ── Box 3: Seller Card ──────────────────────────────────────────── */
+.service .service-seller-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.service .service-seller-card h2 {
+  font-size: 22px;
+  color: var(--navy-blue);
+  margin: 0;
+}
+
+.service .service-seller-card .seller-user {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.service .service-seller-card .seller-user img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f1f5f9;
+  flex-shrink: 0;
+}
+
+.service .service-seller-card .seller-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service .service-seller-card .seller-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.service .service-seller-card .stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.service .service-seller-card .stars span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+.service .service-seller-card .seller-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.service .service-seller-card .seller-buttons button {
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-dark);
+  font-family: inherit;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.service .service-seller-card .seller-buttons button:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.service .service-seller-card .seller-buttons .whatsapp-btn {
+  background-color: var(--emerald-green);
+  color: white;
+  border: none;
+}
+
+.service .service-seller-card .seller-buttons .whatsapp-btn:hover {
+  background-color: #058f63;
+}
+
+.service .service-seller-card .seller-details {
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+.service .service-seller-card .seller-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 15px;
+}
+
+.service .service-seller-card .detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.service .service-seller-card .detail-item .label {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.service .service-seller-card .detail-item .value {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+.service .service-seller-card .seller-details hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 15px 0;
+}
+
+.service .service-seller-card .seller-details p {
+  line-height: 1.6;
+  color: var(--text-dark);
+  font-size: 15px;
+  margin: 0;
+}
+
+/* ── Box 4: Reviews Card ─────────────────────────────────────────── */
+.service .service-reviews-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service .service-reviews-card h2 {
+  font-size: 22px;
+  color: var(--navy-blue);
+  margin: 0;
+}
+
+.service .service-reviews-card .no-reviews {
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+}
+
+.service .service-reviews-card .review-add-container {
+  margin-top: 0;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.service .service-reviews-card .review-add-container h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--navy-blue);
+}
+
+.service .service-reviews-card .order-hint {
+  font-size: 13px;
+  color: var(--text-muted);
+  background: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border-left: 3px solid var(--emerald-green);
+  margin: 0;
+}
+
+.service .service-reviews-card .addForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service .service-reviews-card .addForm input {
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.service .service-reviews-card .addForm input:focus {
+  border-color: var(--emerald-green);
+}
+
+.service .service-reviews-card .addForm select {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  width: max-content;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.service .service-reviews-card .addForm button {
+  width: max-content;
+  padding: 12px 30px;
+  background-color: var(--emerald-green);
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 16px;
+}
+
+.service .service-reviews-card .addForm button:hover {
+  background-color: #058f63;
+}
+
+.service .service-reviews-card .error {
+  color: #ef4444;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   RESPONSIVE — Tablet ≤ 768px
+   ══════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .service {
+    padding: 20px 16px;
+  }
+
+  .service .service-content {
+    gap: 24px;
+  }
+
+  .service .service-hero-card {
+    padding: 24px;
+  }
+
+  .service .service-hero-card h1 {
+    font-size: 26px;
+  }
+
+  .service .service-pricing-card {
+    padding: 24px;
+  }
+
+  .service .service-seller-card {
+    padding: 24px;
+  }
+
+  .service .service-seller-card .seller-user {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .service .service-seller-card .seller-user img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .service .service-seller-card .seller-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .service .service-reviews-card {
+    padding: 24px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   RESPONSIVE — Small Mobile ≤ 480px
+   ══════════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .service {
+    padding: 12px 10px;
+  }
+
+  .service .service-content {
+    gap: 18px;
+  }
+
+  .service .service-hero-card {
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .service .service-hero-card h1 {
+    font-size: 20px;
+  }
+
+  .service .service-hero-card .user-row .pp {
+    width: 32px;
+    height: 32px;
+  }
+
+  .service .service-hero-card .user-row span {
+    font-size: 13px;
+  }
+
+  .service .image-slider .thumbnails img {
+    width: 60px;
+    height: 38px;
+  }
+
+  .service .service-pricing-card {
+    padding: 18px;
+  }
+
+  .service .service-pricing-card .price h2 {
+    font-size: 22px;
+  }
+
+  .service .service-pricing-card .price h3 {
+    font-size: 15px;
+  }
+
+  .service .service-seller-card {
+    padding: 18px;
+  }
+
+  .service .service-seller-card .seller-buttons {
+    flex-direction: column;
+  }
+
+  .service .service-seller-card .seller-buttons button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .service .service-reviews-card {
+    padding: 18px;
+  }
+
+  .service .service-reviews-card h2 {
+    font-size: 20px;
+  }
+
+  .service .service-reviews-card .addForm button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,208 @@
+.ban-appeal {
+  background: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.ban-appeal .container {
+  max-width: 600px;
+  width: 100%;
+}
+
+.appeal-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.appeal-card .header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.appeal-card .header h1 {
+  font-size: 28px;
+  color: #1e293b;
+  margin: 15px 0 10px;
+}
+
+.appeal-card .header p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+.appeal-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.appeal-card .item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.appeal-card label {
+  font-weight: 600;
+  color: #475569;
+  font-size: 14px;
+}
+
+.appeal-card input,
+.appeal-card textarea {
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.appeal-card input:focus,
+.appeal-card textarea:focus {
+  border-color: #ef4444;
+}
+
+.file-input {
+  position: relative;
+}
+
+.file-input input {
+  display: none;
+}
+
+.file-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  background: #f1f5f9;
+  border: 2px dashed #cbd5e1;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #64748b;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.file-label:hover {
+  background: #e2e8f0;
+  border-color: #94a3b8;
+}
+
+.appeal-card button[type="submit"] {
+  background: #ef4444;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: opacity 0.2s;
+}
+
+.appeal-card button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error-msg {
+  color: #ef4444;
+  background: #fee2e2;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.success-msg {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.success-msg h3 {
+  color: #10b981;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.success-msg p {
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.success-msg button {
+  padding: 10px 20px;
+  background: #1e293b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ── Mobile ≤ 768px ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .ban-appeal {
+    padding: 20px 16px;
+  }
+
+  .appeal-card {
+    padding: 28px 24px;
+    border-radius: 16px;
+  }
+
+  .appeal-card .header h1 {
+    font-size: 24px;
+  }
+}
+
+/* ── Small Mobile ≤ 480px ───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .ban-appeal {
+    padding: 16px 12px;
+  }
+
+  .appeal-card {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  .appeal-card .header h1 {
+    font-size: 20px;
+  }
+
+  .appeal-card .header p {
+    font-size: 13px;
+  }
+
+  .appeal-card input,
+  .appeal-card textarea {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .appeal-card button[type="submit"] {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .file-label {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .success-msg h3 {
+    font-size: 20px;
+  }
+}

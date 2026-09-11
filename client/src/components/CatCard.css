@@ -1,0 +1,65 @@
+.catCard {
+  width: 100%;
+  height: 380px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.catCard:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.catCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.catCard .desc {
+  font-weight: 400;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.catCard .title {
+  font-weight: 700;
+  font-size: 24px;
+  position: absolute;
+  top: 40px;
+  left: 15px;
+}
+
+/* ── Mobile ≤ 768px ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .catCard {
+    height: 200px;
+  }
+
+  .catCard .title {
+    font-size: 18px;
+  }
+}
+
+/* ── Small Mobile ≤ 480px ───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .catCard {
+    height: 160px;
+  }
+
+  .catCard .title {
+    font-size: 16px;
+  }
+
+  .catCard .desc {
+    font-size: 12px;
+  }
+}

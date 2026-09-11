@@ -1,0 +1,239 @@
+.conversations {
+  display: flex;
+  justify-content: center;
+  color: #555;
+}
+
+.conversations .container {
+  width: 1400px;
+  padding: 50px 0px;
+}
+
+.conversations .title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.conversations table {
+  width: 100%;
+}
+
+.conversations th {
+  text-align: left;
+}
+
+.conversations th,
+.conversations td {
+  padding: 10px;
+}
+
+.conversations tr {
+  height: 100px;
+}
+
+.conversations tr.active {
+  background-color: #10b98111;
+}
+
+.conversations button {
+  font-weight: 600;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.conversations .chat-btn {
+  background-color: var(--emerald-green);
+  color: white;
+  min-width: 100px;
+  box-shadow: 0 4px 6px rgba(16, 185, 129, 0.1);
+}
+
+.conversations .chat-btn:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(16, 185, 129, 0.2);
+}
+
+.conversations .delete-btn {
+  background-color: #fee2e2;
+  color: #ef4444;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.conversations .delete-btn:hover {
+  background-color: #ef4444;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(239, 68, 68, 0.2);
+}
+
+.conversations .action-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ── Mobile ≤ 768px ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .conversations .container {
+    width: 100%;
+    padding: 20px 16px;
+  }
+
+  .conversations .title h1 {
+    font-size: 24px;
+  }
+
+  .conversations table {
+    display: block;
+    border-collapse: collapse;
+  }
+
+  .conversations thead {
+    display: none; /* Hide headers on mobile */
+  }
+
+  .conversations tbody {
+    display: block;
+  }
+
+  .conversations tr {
+    display: block;
+    height: auto; /* Reset fixed height */
+    background: white;
+    border: 1px solid #eef2f6;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  .conversations tr.active {
+    border-left: 4px solid var(--emerald-green);
+    background-color: #10b98108;
+  }
+
+  .conversations td {
+    display: block;
+    padding: 6px 0;
+    width: 100%;
+    text-align: left;
+    border: none;
+  }
+
+  /* User Name */
+  .conversations td:nth-child(1) {
+    font-weight: 700;
+    color: var(--navy-blue);
+    font-size: 16px;
+    padding-bottom: 4px;
+  }
+
+  /* Last Message */
+  .conversations td:nth-child(2) {
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .conversations td:nth-child(2) a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Date */
+  .conversations td:nth-child(3) {
+    color: #9ca3af;
+    font-size: 12px;
+    padding-top: 2px;
+  }
+
+  /* Actions */
+  .conversations td:nth-child(4) {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #f3f4f6;
+  }
+
+  .conversations .action-buttons {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .conversations .chat-btn {
+    flex: 1;
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  .conversations .delete-btn {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+  }
+}
+
+/* ── Small Mobile ≤ 480px ───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .conversations .container {
+    padding: 16px 12px;
+  }
+
+  .conversations .title h1 {
+    font-size: 20px;
+  }
+
+  .conversations tr {
+    padding: 12px;
+  }
+
+  .conversations .action-buttons {
+    gap: 8px;
+  }
+}
+
+/* ── Extra small phones ≤ 360px ────────────────────────────────── */
+@media (max-width: 360px) {
+  .conversations .container {
+    padding: 12px 8px;
+  }
+
+  .conversations .title h1 {
+    font-size: 18px;
+  }
+
+  .conversations tr {
+    padding: 10px;
+    margin-bottom: 12px;
+  }
+
+  .conversations td:nth-child(1) {
+    font-size: 14px;
+  }
+
+  .conversations td:nth-child(2) {
+    font-size: 13px;
+  }
+
+  .conversations .chat-btn {
+    font-size: 12px;
+    padding: 7px 12px;
+    min-width: 80px;
+  }
+
+  .conversations .delete-btn {
+    width: 34px;
+    height: 34px;
+  }
+}
