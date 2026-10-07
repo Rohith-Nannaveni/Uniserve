@@ -9,7 +9,7 @@ const Message = () => {
   const { id } = useParams();
   const [messages, setMessages] = useState([]);
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-  const [socket, setSocket] = useState(null);
+  // const [socket, setSocket] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -65,8 +65,13 @@ const Message = () => {
   }, [id]);
 
   useEffect(() => {
-    const s = io("http://localhost:5000");
-    setSocket(s);
+    const SOCKET_URL =
+    import.meta.env.VITE_SOCKET_URL || "http://localhost:5000";
+
+    const s = io(SOCKET_URL, {
+      withCredentials: true,
+    });
+    // setSocket(s);
     s.emit("join", currentUser._id);
 
     s.on("message", (data) => {

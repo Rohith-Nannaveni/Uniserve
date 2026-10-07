@@ -32,12 +32,26 @@ const app = express();
 
 // Middleware
 // app.use(helmet());
+// app.use(
+//   cors({
+//     origin: ["http://localhost:3000", "http://localhost:3001"],
+//     credentials: true,
+//   })
+// );
+
+const allowedOrigins = [
+  "http://localhost:3000",
+  "http://localhost:3001",
+  process.env.CLIENT_URL,
+].filter(Boolean);
+
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"],
+    origin: allowedOrigins,
     credentials: true,
   })
 );
+
 app.use(express.json());
 app.use(cookieParser());
 
@@ -53,6 +67,15 @@ const connect = async () => {
     console.error("MongoDB connection error:", error);
   }
 };
+
+// testing purpose
+
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "UniServe backend is running",
+    status: "OK",
+  });
+});
 
 // Routes
 app.use("/api/auth", authRoute);
@@ -86,11 +109,19 @@ app.use((err, req, res, next) => {
 const server = http.createServer(app);
 
 // Socket.io Setup
+// const io = new Server(server, {
+//   cors: {
+//     origin: ["http://localhost:3000", "http://localhost:3001"],
+//   },
+// });
+
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:3000", "http://localhost:3001"],
+    origin: allowedOrigins,
+    credentials: true,
   },
 });
+
 
 app.set("io", io);
 
