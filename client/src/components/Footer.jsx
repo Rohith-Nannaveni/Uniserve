@@ -76,8 +76,8 @@ function Footer() {
             <div className="social">
               <a href="https://twitter.com" target="_blank" rel="noreferrer"><Twitter size={20} /></a>
               <a href="https://facebook.com" target="_blank" rel="noreferrer"><Facebook size={20} /></a>
-              <a href="https://www.linkedin.com/in/yashaswin-kathuri-b46948384/" target="_blank" rel="noreferrer"><Linkedin size={20} /></a>
-              <a href="https://www.instagram.com/this_is_yashaswin/" target="_blank" rel="noreferrer"><Instagram size={20} /></a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer"><Linkedin size={20} /></a>
+              <a href="https://www.instagram.com" target="_blank" rel="noreferrer"><Instagram size={20} /></a>
               <a href="https://youtube.com" target="_blank" rel="noreferrer"><Youtube size={20} /></a>
             </div>
             <div className="link">

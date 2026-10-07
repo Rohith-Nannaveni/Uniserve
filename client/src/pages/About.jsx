@@ -19,30 +19,30 @@ const About = () => {
       <section className="founder-section">
         <div className="founder-image-container">
           <img 
-            src="/images/founder.jpg" 
-            alt="Yashaswin Kathuri - Founder of UniServe" 
+            src="/images/noimage.png" 
+            // alt="Yashaswin Kathuri - Founder of UniServe" 
           />
         </div>
         <div className="founder-content">
-          <span className="founder-title">Founder & Lead Developer</span>
-          <h2>Yashaswin Kathuri</h2>
+          {/* <span className="founder-title">Founder & Lead Developer</span> */}
+          {/* <h2>Yashaswin Kathuri</h2> */}
           <div className="founder-bio">
-            <p>
+            {/* <p>
               Yashaswin Kathuri is an aspiring full-stack developer and innovator with 
               a strong interest in building scalable digital platforms that solve 
               real-world problems. With a solid foundation in web technologies 
               such as React, Node.js, and MongoDB, he is passionate about creating 
               user-centric applications that combine functionality, performance, 
               and modern design.
-            </p>
+            </p> */}
             <br />
-            <p>
+            {/* <p>
               The idea for UniServe was born from observing the challenges students 
               and freelancers face in finding trustworthy opportunities and reliable 
               clients. Yashaswin envisioned a platform that bridges this gap by 
               creating a secure, professional, and university-driven marketplace 
               where talent meets opportunity.
-            </p>
+            </p> */}
           </div>
           
           <div className="founder-quote">
@@ -53,7 +53,7 @@ const About = () => {
 
           <div className="founder-links">
             <a 
-              href="https://portfolio-seven-brown-79.vercel.app/" 
+              // href="https://portfolio-seven-brown-79.vercel.app/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="link-btn portfolio-btn"
@@ -61,7 +61,7 @@ const About = () => {
               <Briefcase size={20} /> View Portfolio
             </a>
             <a 
-              href="https://www.linkedin.com/in/yashaswin-kathuri-b46948384/" 
+              // href="https://www.linkedin.com/in/yashaswin-kathuri-b46948384/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="link-btn linkedin-btn"
