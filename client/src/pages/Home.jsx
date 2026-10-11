@@ -67,12 +67,12 @@ function Home() {
             </div>
             <p>Questions? Our round-the-clock support team is available to help anytime, anywhere.</p>
           </div>
-          <div className="item">
+          {/* <div className="item">
             <video 
-              src={import.meta.env.DEV ? "/feature-video.mp4" : "https://res.cloudinary.com/uniserve-sdp/video/upload/v1776078198/owtvype22nlrfgjdgv1m.mp4"} 
-              controls
+              // src={import.meta.env.DEV ? "/feature-video.mp4" : "https://res.cloudinary.com/uniserve-sdp/video/upload/v1776078198/owtvype22nlrfgjdgv1m.mp4"} 
+              // controls
             ></video>
-          </div>
+          </div> */}
         </div>
       </div>
 
